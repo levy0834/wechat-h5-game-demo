@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>小鱼冲冲冲</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="game-card">
+        <div class="hud">
+          <div>
+            <p class="label">当前分数</p>
+            <p class="value" id="score">0</p>
+          </div>
+          <div>
+            <p class="label">最佳成绩</p>
+            <p class="value" id="best">0</p>
+          </div>
+        </div>
+
+        <div class="canvas-wrap" id="canvasWrap">
+          <canvas id="game" width="360" height="640" aria-label="小鱼冲冲冲游戏画布"></canvas>
+          <div class="overlay" id="overlay">
+            <div class="overlay-card">
+              <p class="badge">微信 H5 Demo</p>
+              <h1>小鱼冲冲冲</h1>
+              <p class="desc">
+                点击屏幕，让小鱼上浮，躲开管道。<br />
+                活下来越久，分数越高。
+              </p>
+              <button id="startBtn" class="primary-btn">开始游戏</button>
+              <p class="hint">单手就能玩，适合地铁摸鱼，但不适合老板路过时太投入。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="jumpBtn" class="ghost-btn">轻触上浮</button>
+          <button id="restartBtn" class="ghost-btn">重新开始</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
